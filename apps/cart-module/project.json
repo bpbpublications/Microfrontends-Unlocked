@@ -1,0 +1,35 @@
+{
+  "name": "cart-module",
+  "root": "apps/cart-module",
+  "projectType": "application",
+  "targets": {
+    "dev": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npm run dev",
+        "cwd": "apps/cart-module"
+      }
+    },
+    "standalone": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npm run standalone",
+        "cwd": "apps/cart-module"
+      }
+    },
+    "build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npm run build",
+        "cwd": "apps/cart-module"
+      }
+    },
+    "test": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npx vitest run",
+        "cwd": "apps/cart-module"
+      }
+    }
+  }
+}

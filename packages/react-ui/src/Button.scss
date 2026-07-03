@@ -1,0 +1,73 @@
+// Button component styles — consumed by any Webpack or Vite app that processes SCSS.
+// Host app bundler must set includePaths to the packages/ directory so this resolves:
+//   @use 'shared-styles/src/tokens'  →  packages/shared-styles/src/_tokens.scss
+@use 'shared-styles/src/tokens' as t;
+
+.ui-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  border: 1px solid transparent;
+  border-radius: t.$radius;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  line-height: 1;
+  transition: background 0.15s, color 0.15s, border-color 0.15s,
+              opacity 0.15s, box-shadow 0.15s;
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(t.$primary, 0.25);
+  }
+
+  &:disabled,
+  &--loading {
+    opacity: 0.55;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  // ── Sizes ──────────────────────────────────────────────
+  &--sm { padding: 0.35rem 0.75rem; font-size: 0.8rem; }
+  &--md { padding: 0.55rem 1.1rem;  font-size: 0.9rem; }
+  &--lg { padding: 0.75rem 1.5rem;  font-size: 1rem;   }
+
+  &--full { width: 100%; }
+
+  // ── Variants ───────────────────────────────────────────
+  &--primary {
+    background: t.$primary;
+    color: white;
+    &:hover:not(:disabled):not(.ui-btn--loading) { background: t.$primary-hover; }
+  }
+
+  &--secondary {
+    background: t.$surface;
+    color: t.$text;
+    border-color: t.$border;
+    &:hover:not(:disabled):not(.ui-btn--loading) { background: t.$bg; }
+  }
+
+  &--outline {
+    background: transparent;
+    color: t.$primary;
+    border-color: t.$primary;
+    &:hover:not(:disabled):not(.ui-btn--loading) { background: #eff6ff; }
+  }
+
+  &--danger {
+    background: t.$error;
+    color: white;
+    &:hover:not(:disabled):not(.ui-btn--loading) { background: t.$error-hover; }
+  }
+
+  &--success {
+    background: t.$success;
+    color: white;
+    &:hover:not(:disabled):not(.ui-btn--loading) { background: t.$success-hover; }
+  }
+}

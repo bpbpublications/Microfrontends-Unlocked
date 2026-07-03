@@ -1,0 +1,6 @@
+{
+  "name": "vue-ui",
+  "root": "packages/vue-ui",
+  "projectType": "library",
+  "targets": {}
+}

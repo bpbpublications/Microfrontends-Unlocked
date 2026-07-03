@@ -1,0 +1,15 @@
+// Design token definitions — single source of truth for all ShopMFE apps.
+// Using !default so any app can override a specific token before @use-ing this file.
+
+$primary:       #2563eb !default;
+$primary-hover: #1d4ed8 !default;
+$bg:            #f8fafc !default;
+$surface:       #ffffff !default;
+$border:        #e2e8f0 !default;
+$text:          #1e293b !default;
+$text-muted:    #64748b !default;
+$success:       #16a34a !default;
+$success-hover: #15803d !default;
+$error:         #dc2626 !default;
+$error-hover:   #b91c1c !default;
+$radius:        10px !default;

@@ -1,0 +1,21 @@
+{
+  "name": "microfrontends-unlocked",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:shell": "nx dev ecommerce-shell",
+    "dev:catalog": "nx dev product-catalog",
+    "dev:cart": "nx dev cart-module",
+    "dev:checkout": "nx dev checkout",
+    "dev": "nx run-many --target=dev --all --parallel=4",
+    "build": "nx run-many --target=build --all",
+    "test": "nx run-many --target=test --projects=product-catalog,cart-module,checkout",
+    "test:e2e": "nx e2e product-catalog"
+  },
+  "devDependencies": {
+    "nx": "^20.0.0"
+  }
+}

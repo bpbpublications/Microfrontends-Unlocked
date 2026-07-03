@@ -1,0 +1,6 @@
+{
+  "name": "shared-styles",
+  "root": "packages/shared-styles",
+  "projectType": "library",
+  "targets": {}
+}

@@ -1,0 +1,31 @@
+// Global base styles — import once in each app's entry point.
+// Outputs CSS custom properties (for runtime theming) alongside the reset.
+@use 'tokens' as t;
+
+:root {
+  --primary:       #{t.$primary};
+  --primary-hover: #{t.$primary-hover};
+  --bg:            #{t.$bg};
+  --surface:       #{t.$surface};
+  --border:        #{t.$border};
+  --text:          #{t.$text};
+  --text-muted:    #{t.$text-muted};
+  --success:       #{t.$success};
+  --error:         #{t.$error};
+  --radius:        #{t.$radius};
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}

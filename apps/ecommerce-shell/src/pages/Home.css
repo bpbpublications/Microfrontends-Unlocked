@@ -1,0 +1,144 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.hero__title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.hero__subtitle {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+/* MFE Slots */
+.mfe-slots__heading {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.mfe-slots__description {
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.slot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.slot {
+  background: var(--surface);
+  border: 2px dashed var(--border);
+  border-radius: 10px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: border-color 0.2s;
+}
+
+.slot:hover {
+  border-color: var(--primary);
+}
+
+.slot__icon {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.slot__title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.slot__status {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* Live remote slots */
+.slot--live {
+  border-color: var(--primary);
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.slot--live:hover {
+  background: #eff6ff;
+  border-color: var(--primary-hover);
+}
+
+.slot__status--live {
+  color: var(--primary);
+  font-weight: 600;
+  font-style: normal;
+}
+
+.slot--cart:hover {
+  background: #eff6ff;
+  border-color: var(--primary-hover);
+}
+
+.slot__status--cart {
+  color: var(--primary);
+  font-weight: 600;
+  font-style: normal;
+}
+
+.slot--checkout:hover {
+  background: #eff6ff;
+  border-color: var(--primary-hover);
+}
+
+.slot__status--checkout {
+  color: var(--primary);
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* Shell-level remote states */
+.remote-wrapper {
+  width: 100%;
+}
+
+.remote-loading {
+  padding: 3rem;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.remote-error {
+  padding: 3rem;
+  text-align: center;
+  color: var(--error);
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 10px;
+}
+
+.remote-error code {
+  font-family: monospace;
+  background: #fee2e2;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+}

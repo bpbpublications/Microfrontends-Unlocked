@@ -1,0 +1,21 @@
+{
+  "name": "ecommerce-shell",
+  "root": "apps/ecommerce-shell",
+  "projectType": "application",
+  "targets": {
+    "dev": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npx webpack serve --mode development",
+        "cwd": "apps/ecommerce-shell"
+      }
+    },
+    "build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npx webpack --mode production",
+        "cwd": "apps/ecommerce-shell"
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "affected": {
+    "defaultBase": "main"
+  },
+  "targetDefaults": {
+    "build": {
+      "cache": true,
+      "dependsOn": ["^build"]
+    },
+    "dev": {
+      "cache": false
+    }
+  },
+  "defaultProject": "ecommerce-shell"
+}

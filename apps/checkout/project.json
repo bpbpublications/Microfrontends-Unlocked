@@ -1,0 +1,28 @@
+{
+  "name": "checkout",
+  "root": "apps/checkout",
+  "projectType": "application",
+  "targets": {
+    "dev": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npx webpack serve --mode development",
+        "cwd": "apps/checkout"
+      }
+    },
+    "build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npx webpack --mode production",
+        "cwd": "apps/checkout"
+      }
+    },
+    "test": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npx vitest run",
+        "cwd": "apps/checkout"
+      }
+    }
+  }
+}

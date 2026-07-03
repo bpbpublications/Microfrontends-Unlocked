@@ -1,0 +1,35 @@
+{
+  "name": "product-catalog",
+  "root": "apps/product-catalog",
+  "projectType": "application",
+  "targets": {
+    "dev": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npx webpack serve --mode development",
+        "cwd": "apps/product-catalog"
+      }
+    },
+    "build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npx webpack --mode production",
+        "cwd": "apps/product-catalog"
+      }
+    },
+    "test": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npx vitest run",
+        "cwd": "apps/product-catalog"
+      }
+    },
+    "e2e": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npx playwright test",
+        "cwd": "apps/product-catalog"
+      }
+    }
+  }
+}
